@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  color: #000;
+  padding: 40px 70px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.logo {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 12px;
+}
+
+.btn,
+.btn-small {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 12px;
+}
+
+.btn-small {
+  padding: 8px 16px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 420px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 90px;
+}
+
+.project-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.project-card p {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.project-image {
+  height: 250px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.black .project-image {
+  background: #000;
+  color: #00e37a;
+}
+
+.mint .project-image {
+  background: #dffdf3;
+  color: #075448;
+}
+
+.light .project-image {
+  background: #dffcff;
+  color: #3d4cff;
+}
+
+.navy .project-image {
+  background: #07194d;
+  color: #3c7cff;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  margin-bottom: 100px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.section-grid h2,
+.faq h2,
+.footer h2 {
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.text-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.dark {
+  margin-top: 10px;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #ddd;
+  padding: 22px 0;
+}
+
+.service-item h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.service-item p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.faq {
+  max-width: 720px;
+  margin-bottom: 100px;
+}
+
+.faq h2 {
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 0;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding-bottom: 25px;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.light-btn {
+  background: #fff;
+  color: #000;
+  margin-top: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    padding: 25px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .hero,
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+
+  .service-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
